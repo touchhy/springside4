@@ -2,8 +2,9 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
 	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	version="2.5">
+    <!--WEB应用的名字-->
 	<display-name>quickstart</display-name>
-	
+	<!--servlet 上下文context初始化参数-->
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
