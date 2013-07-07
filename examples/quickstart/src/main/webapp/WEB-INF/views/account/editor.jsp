@@ -70,11 +70,30 @@
     </div>
 
     <div id="editor">
-        Go ahead&hellip;
     </div>
+    <input type="hidden" id="editorContent"/>
+    <button id="btnSave" type="submit">Save</button>
+    <button id="btnRestore" type="submit">Clear</button>
 </div>
 </div>
 <script>
+    $(function () {
+//        $('#editor').wysiwyg();
+        $('#btnSave').bind('click', function () {
+//            $("#editorContent").val($("#editor").html().replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'));
+            $.post("/quickstart/editor/save",{
+                content:$("#editorContent").val()
+            },function(data,status){
+                alert(status);
+            });
+        });
+    });
+    $(function(){
+        $('#btnRestore').bind('click',function(){
+//            $('#editor').wysiwyg();
+            $('#editor').html($("#editor").html());
+        });
+    });
     $(function(){
         function initToolbarBootstrapBindings() {
             var fonts = ['Serif', 'Sans', 'Arial', 'Arial Black', 'Courier',
