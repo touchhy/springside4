@@ -16,11 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-import org.springside.examples.quickstart.entity.Content;
 import org.springside.examples.quickstart.entity.Task;
 import org.springside.examples.quickstart.entity.User;
 import org.springside.examples.quickstart.service.account.ShiroDbRealm.ShiroUser;
-import org.springside.examples.quickstart.service.content.ContentService;
 import org.springside.examples.quickstart.service.task.TaskService;
 import org.springside.modules.web.Servlets;
 
@@ -35,7 +33,7 @@ import com.google.common.collect.Maps;
  * Update page : GET /task/update/{id}
  * Update action : POST /task/update
  * Delete action : GET /task/delete/{id}
- * Browse action : GET /task/browse/{id}
+ * 
  * @author calvin
  */
 @Controller
@@ -52,8 +50,6 @@ public class TaskController {
 
 	@Autowired
 	private TaskService taskService;
-    @Autowired
-    private ContentService contentService;
 
 	@RequestMapping(method = RequestMethod.GET)
 	public String list(@RequestParam(value = "page", defaultValue = "1") int pageNumber,
@@ -74,7 +70,6 @@ public class TaskController {
 		return "task/taskList";
 	}
 
-
 	@RequestMapping(value = "create", method = RequestMethod.GET)
 	public String createForm(Model model) {
 		model.addAttribute("task", new Task());
@@ -87,11 +82,7 @@ public class TaskController {
 		User user = new User(getCurrentUserId());
 		newTask.setUser(user);
 
-		Task task = taskService.saveTask(newTask);
-        Content content = new Content();
-        content.setTaskId(task.getId());
-        content.setContent("没有任何内容");
-        contentService.save(content);
+		taskService.saveTask(newTask);
 		redirectAttributes.addFlashAttribute("message", "创建任务成功");
 		return "redirect:/task/";
 	}
@@ -127,14 +118,7 @@ public class TaskController {
 			model.addAttribute("task", taskService.getTask(id));
 		}
 	}
-    @RequestMapping(value = "browse/{taskId}",method = RequestMethod.GET)
-    public String browse(@PathVariable("taskId") Long taskId, Model model) {
-        Content content = contentService.selectByTaskId(taskId);
-        Task task = taskService.getTask(taskId);
-        model.addAttribute("content",content);
-        model.addAttribute("task", task);
-        return "/task/browse";
-    }
+
 	/**
 	 * 取出Shiro中的当前用户Id.
 	 */

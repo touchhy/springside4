@@ -29,8 +29,8 @@ public class TaskService {
 		return taskDao.findOne(id);
 	}
 
-	public Task saveTask(Task entity) {
-		return taskDao.save(entity);
+	public void saveTask(Task entity) {
+		taskDao.save(entity);
 	}
 
 	public void deleteTask(Long id) {
