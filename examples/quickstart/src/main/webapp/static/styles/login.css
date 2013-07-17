@@ -1,0 +1,29 @@
+#loginFormWraper{
+    height:460px;
+    width:950px;
+    background-image: url("../images/login_background.png");
+}
+#loginForm{
+    background-color: #EEEEEE;
+    position:relative;
+    padding:10px;
+    top:42%;
+    left:35%;
+    width:300px;
+    height:110px;
+    display:block;
+    border:2px solid #dddddd;
+}
+.form-horizontal .controls{
+    margin-left:10px
+}
+.input-medium {
+    width: 90%;
+}
+.form-horizontal .control-group {
+    margin-bottom: 10px;
+}
+.center-custom{
+    margin-left:25%;
+}
+
