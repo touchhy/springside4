@@ -45,6 +45,8 @@
 			</div>
         </div>
 	</form>
+    <div class="decorate-part1"></div>
+    <div class="decorate-part2"></div>
     </div>
 	<script>
 		$(document).ready(function() {
