@@ -1,0 +1,70 @@
+#content{
+    position:relative;
+    width:960px;
+    background-color: lightgoldenrodyellow;
+}
+#content .decorate-part1 {
+    position: absolute;
+    top:-122px;
+    right:-1px;
+    width:365px;
+    height:122px;
+    background: url("../images/decorate-part1.png") top left no-repeat;
+}
+
+#content .decorate-part2 {
+    position: absolute;
+    top:-122px;
+    right:-125px;
+    width:125px;
+    height:239px;
+    background: url("../images/decorate-part2.png") top right no-repeat;
+}
+
+#search_btn {
+    height: 31px;
+    width: 31px;
+    background: transparent;
+    border:none;
+}
+.bottom-line{
+    border-bottom: solid 1px #D1E4E4 ;
+    margin-bottom:2px;
+    padding-bottom:2px;
+}
+#search-input{
+    height:15px;
+}
+.margin-right{
+    margin-left:740px;
+}
+.custom-bottom2{
+    margin-top:95px;
+}
+.custom-bottom{
+    margin-top:90px;
+    margin-bottom:5px;
+    margin-left:-10px;
+}
+.custom-center{
+    margin-left: 450px;
+    padding:10px;
+}
+form {
+    margin: 0px;
+}
+.row{
+    margin-left:0px;
+}
+.custom-move-left{
+    margin-top:5px;
+    margin-left: 10px;
+}
+.custom-td-border{
+    width:750px;
+    background-color: lightyellow;
+}
+table{
+    border-collapse: separate;
+    border-spacing: 10px;
+}

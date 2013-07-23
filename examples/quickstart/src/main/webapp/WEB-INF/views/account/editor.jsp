@@ -3,8 +3,8 @@
 <html>
 <head>
     <title>编辑页面</title>
-    <link href="${ctx}/quickstart/static/styles/editor.css" type="text/css" rel="stylesheet" />
-    <script src="${ctx}/quickstart/static/js/bootstrap-wysiwyg.js" type="text/javascript"></script>
+    <link href="${ctx}/static/styles/editor.css" type="text/css" rel="stylesheet" />
+    <script src="${ctx}/static/js/bootstrap-wysiwyg.js" type="text/javascript"></script>
     <script src="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.js"></script>
     <script src="https://mindmup.s3.amazonaws.com/lib/jquery.hotkeys.js"></script>
     <link href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" rel="stylesheet">

@@ -19,3 +19,13 @@
 #footer a {color: #999;}
 
 body{background-color:#fffbf1}
+.footer-right{
+    float: right;
+}
+.footer-left{
+    float: left;
+    margin-right:30px;
+}
+#footer span{
+    margin:20px;
+}
